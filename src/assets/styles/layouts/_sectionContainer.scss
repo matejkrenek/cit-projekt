@@ -1,0 +1,15 @@
+.sectionContainer {
+
+}
+
+.sectionContainer__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-basis: 1;
+
+    > .btn {
+        margin-right: 8px;
+        margin-bottom: 12px;
+    }
+}

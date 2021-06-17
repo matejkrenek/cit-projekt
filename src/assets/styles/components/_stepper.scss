@@ -1,0 +1,98 @@
+.stepper {
+    display: flex;
+    width: 750px;
+}
+
+.stepper__item {
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:not(:first-child) {
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 7px;
+            z-index: 1;
+            left: -50%;
+            background-color: color(blue, 50);
+            height: 4px;
+            width: 100%;
+        }
+    }
+
+    &.is-active {
+
+        &::before {
+            background-color: color(blue, 50);
+        }
+
+        .stepper__symbol {
+            background-color: color(blue, 50);
+
+            &::after {
+                content: "";
+                position: absolute;
+                height: 12px;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 12px;
+                border: none;
+                background-color: color(white, base);
+                transition: transform 0.3s;
+                cursor: pointer;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &.is-disabled {
+
+        &::before {
+            background-color: color(grey, 50);
+        }
+
+        .stepper__symbol {
+            background-color: color(grey, 50);
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
+
+.stepper__text {
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 600;
+    color: color(grey, 70);
+    margin-bottom: 6px;
+}
+
+.stepper__symbol {
+    position: relative;
+    width: 18px;
+    z-index: 10;
+    height: 18px;
+    background-color: color(blue, 50);
+    border-radius: 50%;
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 8px;
+        left: calc(50% - 4px);
+        top: calc(50% - 1px);
+        transform: rotate(45deg) translate(-50%, -50%);
+        width: 4px;
+        border-bottom: 1.5px solid white;
+        border-right: 1.5px solid white;
+        transition: transform 0.3s;
+        cursor: pointer;
+    }
+}

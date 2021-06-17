@@ -1,0 +1,29 @@
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table__head .table__row{
+    background-color: color(navy, 50);
+    color: color(white, base);
+    
+}
+
+.table__cell {
+    text-align: start;
+    padding: 6px 12px;
+    font-weight: 400;
+    
+}
+
+.table__body .table__row {
+    background-color: color(white, base);
+
+    &:not(:last-child) {
+        border-bottom: 1px solid color(grey, 50);
+    }
+
+    &:hover {
+        background-color: color(grey, 10);
+    }
+}

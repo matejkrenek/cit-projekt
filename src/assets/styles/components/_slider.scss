@@ -1,0 +1,27 @@
+.slider {
+    overflow: hidden;
+    margin: 64px 64px;
+    position: relative;
+}
+
+.slider__show {
+    @include flexbox(row);
+    transition: transform 0.3s;
+}
+
+.slider__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border: none;
+
+    &:nth-child(1) {
+        left: 0;
+
+    }
+
+    &:nth-child(2) {
+        right: 0px;
+    }
+}

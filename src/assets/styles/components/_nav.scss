@@ -1,0 +1,17 @@
+.header__nav {
+
+}
+
+.nav__list {
+    @include flexbox(row, center)
+}
+
+.nav__link {
+    font-size: font(fontSize, s);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &:not(:last-child) {
+        margin-right: 16px;
+    }
+}

@@ -1,0 +1,150 @@
+/***********************
+    COLORS VARIABLES
+ ***********************/
+$colors: (
+    navy: (
+        70: #061624,
+        50: #061B2E,
+    ),
+    blue: (
+        90: #1D467A,
+        70: #1D6ABA,
+        50: #1D85E8,
+        30: #78B6F1,
+        10: #DDEDFC,
+        5: #EDF6FD,
+    ),
+    green: (
+        50: #2CC8A7,
+    ),
+    yellow: (
+        50: #FFC259,
+    ),
+    pink: (
+        50: #FF8082,
+    ),
+    grey: (
+        90: #526475,
+        70: #7F92A4,
+        50: #D8E3E7,
+        30: #D8E3E7,
+        10: #F6F9FC,
+    ),
+    white: (
+        base: #ffffff
+    )
+);
+
+/*******************
+    FONTS VARIABLES
+ *******************/
+ $fonts: (
+    fontFamily: (
+        base: "Poppins",
+    ),
+
+    fontSize: (
+        h1: 56px,
+        h2: 24px,
+        h3: 18px,
+        h4: 16px,
+        p1: 16px,
+        p2: 14px,
+        s: 12px,
+        hl: 10px,
+    ),
+
+    fontWeight: (
+        base: 400,
+        bold: 500,
+        extraBold: 700,
+    ),
+
+    lineHeight: (
+        base: 100%,
+        medium: 120%,
+        large: 180%,
+    ),
+);
+
+/****************************
+    BREAKPOINTS VARIABLES
+ ****************************/
+$spacing: (
+    8: 8px,
+    16: 16px,
+    24: 24px,
+    32: 32px,
+    40: 40px,
+    64: 64px,
+);
+
+@each $key, $value in $spacing {
+    .p--#{$key} {
+        padding: $value;
+    }
+
+    .p-top--#{$key} {
+        padding-top: $value;
+    }
+
+    .p-bottom--#{$key} {
+        padding-bottom: $value;
+    }
+
+    .p-left--#{$key} {
+        padding-left: $value;
+    }
+
+    .p-right--#{$key} {
+        padding-right: $value;
+    }
+
+    .p-x--#{$key} {
+        padding-left: $value;
+        padding-right: $value;
+    }
+
+    .p-y--#{$key} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+
+    .m--#{$key} {
+        margin: $value;
+    }
+
+    .m-top--#{$key} {
+        margin-top: $value;
+    }
+
+    .m-bottom--#{$key} {
+        margin-bottom: $value;
+    }
+
+    .m-left--#{$key} {
+        margin-left: $value;
+    }
+
+    .m-right--#{$key} {
+        margin-right: $value;
+    }
+
+    .m-x--#{$key} {
+        margin-left: $value;
+        margin-right: $value;
+    }
+
+    .m-y--#{$key} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+  }
+
+
+/****************************
+    BREAKPOINTS VARIABLES
+ ****************************/
+$breakpoints: (
+    lg: 1200px,
+);

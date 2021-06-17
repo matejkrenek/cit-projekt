@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <script defer src="/assets/javascript/index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <header class="header">
+            <div class="header__container site--container">
+                <div class="logo">
+                    <a href="/" class="logo__text">Matěj Křenek</a>
+                </div>
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="nav__link"><a href="">Dokumentace</a></li>
+                        <li class="nav__link"><a href="">Sestavení obovdu</a></li>
+                        <li class="nav__link"><a href="">Video prezentace</a></li>
+                    </ul>
+                </nav>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container site--container">
+                <section class="main__header">
+                    <h1>Sestavení obvodu</h1>
+                    <p>Úplně první částí se kterou jsem začal bylo sestavení samotného obvodu</p>
+                </section>
+                <section class="main__section">
+                    <h2>Seznam použitých součástek</h2>
+                    <table class="table table--primary">
+                        <thead class="table__head">
+                            <tr class="table__row">
+                                <th class="table__cell">Označení</th>
+                                <th class="table__cell">Typ</th>
+                                <th class="table__cell">Cena za kus</th>
+                                <th class="table__cell">Počet kusů</th>
+                                <th class="table__cell">Celková Cena</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table__body">
+                            <tr class="table__row">
+                                <td class="table__cell">R3-R9</td>
+                                <td class="table__cell">Rezistor 330R</td>
+                                <td class="table__cell">1,00 Kč</td>
+                                <td class="table__cell">7</td>
+                                <td class="table__cell">7,00 Kč</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell">C2, C3</td>
+                                <td class="table__cell">Kondenzátor 100n</td>
+                                <td class="table__cell">1,00 Kč</td>
+                                <td class="table__cell">2</td>
+                                <td class="table__cell">2,00 Kč</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell">C1</td>
+                                <td class="table__cell">Kondenzátor polarizovaný 47uF</td>
+                                <td class="table__cell">2,00 Kč</td>
+                                <td class="table__cell">1</td>
+                                <td class="table__cell">2,00 Kč</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell">R1, R2</td>
+                                <td class="table__cell">Rezistor 10K</td>
+                                <td class="table__cell">1,00 Kč</td>
+                                <td class="table__cell">2</td>
+                                <td class="table__cell">2,00 Kč</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell">NE555</td>
+                                <td class="table__cell">NE555</td>
+                                <td class="table__cell">7,00 Kč</td>
+                                <td class="table__cell">1</td>
+                                <td class="table__cell">7,00 Kč</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell">MH5493A</td>
+                                <td class="table__cell">MH5493A</td>
+                                <td class="table__cell">10,00 Kč</td>
+                                <td class="table__cell">1</td>
+                                <td class="table__cell">10,00 Kč</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell">BCD dekodér E147D</td>
+                                <td class="table__cell">BCD dekodér E147D</td>
+                                <td class="table__cell">10,00 Kč</td>
+                                <td class="table__cell">1</td>
+                                <td class="table__cell">10,00 Kč</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell">7 segmentový displej</td>
+                                <td class="table__cell">7 segmentový displej</td>
+                                <td class="table__cell">7,00 Kč</td>
+                                <td class="table__cell">1</td>
+                                <td class="table__cell">7,00 Kč</td>
+                            </tr>
+                            <tr class="table__row">
+                                <td class="table__cell">MH54ALS08</td>
+                                <td class="table__cell">MH54ALS08</td>
+                                <td class="table__cell">10,00 Kč</td>
+                                <td class="table__cell">1</td>
+                                <td class="table__cell">10,00 Kč</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section class="main__section">
+                    <h2>Schéma zapojení</h2>
+                    <img src="./assets/images/circuit-schema.png" alt="">
+                </section>
+                <section class="main__section">
+                    <h2>Popis zapojení</h2>
+                    <div class="">
+                        <div class="card card--accordion js-accordion">
+                            <div class="card--accordion__head js-accordion-head">
+                                <h3>1. Vytvoření schématu</h3>
+                            </div>
+                            <div class="card--accordion__body js-accordion-body">
+                                <p>Prvním krokem bylo vytvoření schématu v programu <a href="https://www.kicad.org/" class="text--link">Kicad</a>, aby následné zapojení na nepájivém poli bylo snadší</p>
+                            </div>
+                        </div>
+                        <div class="card card--accordion js-accordion">
+                            <div class="card--accordion__head js-accordion-head">
+                                <h3>2. Nachystání součástek</h3>
+                            </div>
+                            <div class="card--accordion__body js-accordion-body">
+                                <p>Podle vytvořeného schématu v prvním kroku jsem si nachystal všechny potřebné součástky včetně zdroje a nepájivého pole.</p>
+                            </div>
+                        </div>
+                        <div class="card card--accordion js-accordion">
+                            <div class="card--accordion__head js-accordion-head">
+                                <h3>3. Zapojení generátoru</h3>
+                            </div>
+                            <div class="card--accordion__body js-accordion-body">
+                                <p>Jako první jsem začal se stavbou generátoru obdelníkového signálu s obvodem NE555, který střídal 2:1</p>
+                            </div>
+                        </div>
+                        <div class="card card--accordion js-accordion">
+                            <div class="card--accordion__head js-accordion-head">
+                                <h3>4. Připojení čítače na výstup generátoru</h3>
+                            </div>
+                            <div class="card--accordion__body js-accordion-body">
+                                <p>Na výstup generátoru jsem zapojil čítač, který sčítal příchozí signály z generátoru.</p>
+                            </div>
+                        </div>
+                        <div class="card card--accordion js-accordion">
+                            <div class="card--accordion__head js-accordion-head">
+                                <h3>5. Připojení dekodéru a sedmisegmentu</h3>
+                            </div>
+                            <div class="card--accordion__body js-accordion-body">
+                                <p>Binární kód z čítače jsem pomocí dekodéru dekódoval na kód srozumitelný 7 segmentem. 7 segment pak dekadicky zobrazoval sčítaná čísla.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="main__section">
+                    <h2>Fotografie z realizace</h2>
+                    <div class="grid--third js-preview">
+                        <img src="./assets/images/realizacion-photo-1.jpg" alt="" class="previewImage js-preview-image">
+                        <img src="./assets/images/realizacion-photo-2.jpg" alt="" class="previewImage js-preview-image">
+                        <img src="./assets/images/realization-photo-3.jpg" alt="" class="previewImage js-preview-image">
+                        <div class="previewImage__cover js-preview-cover">
+                            <div class="previewImage__header js-preview-header">
+                                <button class="js-preview-close btn btn--circle">
+                                    <i class="far fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

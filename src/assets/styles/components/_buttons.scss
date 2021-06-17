@@ -1,0 +1,232 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    background-color: color(blue, 50);
+    color: color(white, base);
+    border: 2px solid color(blue, 50);
+    font-size: font(fontSize, p2);
+    cursor: pointer;
+    transition: background-color 0.1s, border-color 0.1s, color 0.1s, opacity 0.1s;
+    width: fit-content;
+    width: -moz-fit-content;
+    line-height: font(lineHeight, base);
+    padding: space(16) space(24);
+    font-weight: font(fontWeight, bold);
+    outline: none;
+
+    &:hover:not(.btn--circle),
+    &:focus:not(.btn--circle),
+    &:active:not(.btn--circle) {
+        background-color: color(blue, 70);
+        border: 2px solid color(blue, 70);
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    span {
+        margin-left: 6px;
+    }
+
+    
+    &.btn--small {
+        padding: space(8) space(16);
+    }
+
+    &.is-loading {
+        position: relative;
+
+        > * {
+            opacity: 0;
+        }
+
+        &::after, 
+        &::before {
+            opacity: 0;
+        }
+
+        .loadingSpinner {
+            opacity: 1;
+        }
+    }
+}
+
+.btn--primary {
+    background-color: color(blue, 50);
+    color: color(white, base);
+
+    &::after {
+        border-color: color(white, base);
+    }
+}
+
+.btn--secondary {
+    background-color: transparent;
+    color: color(blue, 50);
+    border: 2px solid color(grey, 50);
+
+    &.btn--grey {
+        color: color(grey, 70)
+    }
+
+    &::after {
+        border-color: color(blue, 50);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: color(grey, 10);
+        color: color(blue, 70);
+        border: 2px solid color(grey, 50);
+
+        &.btn--grey {
+            color: color(grey, 70)
+        }
+    }
+
+    .loadingSpinner {
+        border-top-color: color(blue, 50);
+    }
+}
+
+.btn--small {
+
+    .loadingSpinner {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+.btn--square {
+    height: 50px;
+    width: 50px;
+    padding: 0 !important;
+
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    &.btn--small {
+        height: 32px;
+        width: 32px;
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+    }
+}
+
+.btn--circle {
+    height: 64px;
+    width: 64px;
+    padding: 0 !important;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-color: color(white, base);
+    color: color(blue, 50);
+    box-shadow: 0px 4px 25px rgba($color: color(grey, 90), $alpha: 0.05);
+    z-index: 1;
+
+    &:hover {
+        background-color: color(grey, 10);
+    } 
+}
+
+
+.btn--next,
+.btn--prev {
+    position: relative;
+    padding: space(16) space(64);
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: calc(50% - 4px);
+        width: 8px;
+        height: 8px;
+        border: 2px solid;
+        border-top: none;
+        border-left: none;
+        transition: left 0.3s, right 0.3s;
+    }
+}
+
+.btn--next {
+    &::after {
+        right: space(24);
+        transform: rotate(-45deg);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        &::after {
+            right: 21px;
+        }    
+    }
+}
+
+.btn--prev {
+    &::after {
+        left: space(24);
+        transform: rotate(135deg);
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+        &::after {
+            left: 21px;
+        }
+    }
+}
+
+.btn--navy {
+    background-color: color(navy, 50);
+    border-color: color(navy, 50);
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: color(navy, 70) !important;
+        border: 2px solid color(navy, 70) !important;
+    }
+}
+
+.loadingSpinner {
+    position: absolute;
+    display: block;
+    border: 3px solid transparent;
+    border-top-color: color(white, base);
+    border-radius: 50%;
+    width: 25px;
+    margin: 0 !important;
+    height: 25px;
+    animation: donut-spin 0.9s ease infinite;
+}
+
+@keyframes donut-spin {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
+*:disabled,
+*.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+

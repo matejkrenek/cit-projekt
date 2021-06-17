@@ -1,0 +1,116 @@
+// episodeCards
+.episodeCard__container {
+    margin-top: 64px;
+
+    .btn--circle {
+        opacity: 0;
+    }
+
+    &:hover {
+        .btn--circle {
+            opacity: 1;
+        }
+    }
+}
+
+.episodeCard {
+    @include flexbox(column, stretch, flex-start);
+    flex: 0 0 calc(33.33333% - 48px);
+    margin: 0 24px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+    &:hover,
+    &:active,
+    &:focus {
+        box-shadow: 0px 4px 25px rgba($color: color(grey, 90), $alpha: 0.05);
+    }
+
+    @media (max-width: breakpoint(lg)) {
+        flex: 0 0 calc(50% - 48px);
+    }
+}
+
+.episodeCard__preview {
+    height: 300px;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.episodeCard__content {
+    padding: 24px;
+    padding-bottom: 0px;
+    text-align: start;
+
+    .episodeCard__title {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .episodeCard__description {
+        margin: 8px 0;
+    }
+
+}
+
+.episodeCard__footer {
+    @include flexbox(row, flex-end);
+    padding: 24px;
+    padding-top: 0px;
+    flex-grow: 1; 
+
+    > .btn {
+    }
+}
+
+.episodeCard__labels {
+    @include flexbox(row);
+    flex-wrap: wrap;
+    margin: 12px 0;
+
+    > * {
+        margin: 8px;
+        margin-left: 0px;
+        margin-top: 0;
+    }
+}
+
+// Cards
+.card {
+    background-color: color(white, base);
+}
+
+.card--accordion {
+    margin-bottom: 12px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.card--accordion__head {
+    padding: 8px 16px;
+    border-bottom: 1px solid color(grey, 10);
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+
+    &:hover {
+        background-color: color(navy, 50);
+        color: color(white, base);
+    }
+}
+
+.card--accordion__body {
+    max-height: 0px;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+
+    p {
+        padding: 16px;
+    }
+}

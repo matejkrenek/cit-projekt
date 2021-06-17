@@ -1,0 +1,43 @@
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p, span, .p1, .p2, .s, .hl {
+    letter-spacing: 0.5px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: font(fontWeight, extraBold);
+}
+
+h1, .h1 {
+    font-size: font(fontSize, h1);
+}
+
+h2, .h2 {
+    font-size: font(fontSize, h2);
+}
+
+h3, .h3 {
+    font-size: font(fontSize, h3);
+}
+
+h4, .h4 {
+    font-size: font(fontSize, h4);
+}
+
+p, .p1 {
+    font-size: font(fontSize, p1);
+}
+
+.p2 {
+    font-size: font(fontSize, p2);
+}
+
+.s {
+    font-size: font(fontSize, s);
+}
+
+.hl {
+    font-size: font(fontSize, hl);
+    font-weight: font(fontWeight, extraBold);
+    text-transform: uppercase;
+}
+

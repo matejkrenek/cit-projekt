@@ -1,0 +1,7 @@
+.header {
+    padding: 24px 0;
+}
+
+.header__container {
+    @include flexbox(row, center, space-between);
+}

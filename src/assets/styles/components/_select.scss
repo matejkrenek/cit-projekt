@@ -1,0 +1,116 @@
+.formField--select select {
+    display: none;
+    &:focus ~ .select { 
+        
+        .select--head {
+            border: 1px solid color(blue, 50) !important;
+        }
+    }
+}
+
+.select {
+    position: relative;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.select--head {
+    @include flexbox(row, center);
+    padding: 12px;
+    border-radius: 5px;
+    font-weight: 500;
+    border: 1px solid color(grey, 50);
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: calc(50% - 4px);
+        transform: rotate(45deg);
+        right: 12px;
+        width: 8px;
+        height: 8px;
+        border: 2px solid;
+        border-top: none;
+        border-left: none;
+        transition: transform 0.3s;
+    }
+
+    .select.is-active & {
+
+        &::after {
+            top: calc(50%);
+            transform: rotate(-135deg);
+        }
+    }
+}
+
+.select--tag {
+    @include flexbox(row, center);
+
+    margin-right: 12px;
+    padding: 0px 8px;
+    background-color: color(grey, 10);
+    border-radius: 5px;
+
+    .tag--delete {
+        position: relative;
+        display: block;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: color(white, base);
+        margin-left: 4px;
+
+        &::after,
+        &::before {
+            content: "";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+            width: 8px;
+            height: 1px;
+            background-color: black;
+        }
+
+        &::after {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &::before {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+}
+
+.select--dropdown {
+    position: absolute;
+    width: 100%;
+    top: calc(100% + 12px);
+    background-color: color(grey, 10);
+    border-radius: 5px;
+    max-height: 0px;
+    transition: max-height 0.3s;
+    pointer-events: none;
+    overflow: hidden;
+
+    .select.is-active & {
+        max-height: 300px;
+        pointer-events: all;
+    }
+}
+
+.select--option {
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:not(:last-child) {
+        border-bottom: 1px solid color(grey, 50);
+    }
+
+    &:hover {
+        background-color: color(grey, 50);
+    }
+}

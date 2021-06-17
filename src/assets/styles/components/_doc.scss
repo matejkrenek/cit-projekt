@@ -1,0 +1,24 @@
+.doc__container {
+    @include flexbox(row, center);
+    background-color: color(white, base);
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 25px rgba($color: color(grey, 90), $alpha: 0.05);
+
+    img {
+        width: 32px;
+        display: block;
+    }
+
+    .doc--content {
+        max-width: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: max-width 0.3s;
+
+        span {
+            padding-left: 12px;
+        }
+    }
+}

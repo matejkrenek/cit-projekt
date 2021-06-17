@@ -1,0 +1,12 @@
+.fixed__rightCorner {
+    @include flexbox(row, center);
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+
+    > * {
+        &:not(:last-child) {
+            margin-right: 12px;
+        }
+    }
+}

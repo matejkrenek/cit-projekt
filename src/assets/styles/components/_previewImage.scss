@@ -1,0 +1,78 @@
+.previewImage {
+
+    width: 100%;
+    cursor: pointer;
+    border: 2px solid transparent;
+
+    &:hover {
+        border: 2px solid color(navy, 50);
+    }
+}
+
+.previewImage__cover {
+    @include flexbox(row, center, center);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: .5);
+    display: none;
+    z-index: 100;
+
+    img {
+        width: auto !important;
+        border: none;
+        max-height: 90vh;
+        height: auto;
+
+        &:hover {
+            border: none;
+        }
+    }
+
+    &.is-opened {
+        display: flex;
+    }
+
+    .btn--circle {
+        opacity: 1
+    }
+}
+
+.previewImage__controllers {
+}
+
+.previewImage__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:nth-child(1) {
+        left: 24px;
+    }
+
+    &:nth-child(2) {
+        right: 24px;
+    }
+
+}
+
+.previewImage__header {
+    @include flexbox(row, center, flex-end);
+
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 24px;
+
+    > .btn {
+        order: 2;
+    }
+}
+
+.previewImage__counter {
+    order: 1;
+    font-size: 32px;
+    color: color(white, base)
+}

@@ -1,0 +1,23 @@
+.grid--third {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 12px;
+    margin-right: auto;
+    margin-left: auto;
+
+    img {
+        width: 100%;
+    }
+}
+
+.grid--half {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
+    margin-right: auto;
+    margin-left: auto;
+
+    img {
+        width: 100%;
+    }
+}
